@@ -57,6 +57,10 @@ const perfectCSS = `
   .fold-spaces {
     gap: 0.25rem !important;
   }
+
+  div[style*="rotateY(180deg)"] {
+    display: none !important;
+  }
 `;
 
 // Fonction pour manipuler le menu déroulant
@@ -77,6 +81,25 @@ async function switchLanguage(page, targetLang) {
 
   // 4. Laisse React mettre à jour les textes du CV
   await new Promise(r => setTimeout(r, 500));
+}
+
+// Fonction pour forcer le mode clair en cliquant sur le bouton
+async function switchToLightMode(page) {
+  await page.evaluate(() => {
+    // Vérifie si Tailwind a mis la classe 'dark' sur la page
+    const isDarkMode = document.documentElement.classList.contains('dark');
+
+    if (isDarkMode) {
+      // Cherche le bouton (on gère FR et EN au cas où l'aria-label change avec la langue)
+      const themeBtn = document.querySelector('button[aria-label="Changer le thème"]')
+                    || document.querySelector('button[aria-label="Switch theme"]');
+
+      if (themeBtn) themeBtn.click();
+    }
+  });
+
+  // Laisse le temps à l'animation de transition de se terminer
+  await new Promise(r => setTimeout(r, 300));
 }
 
 const pdfOptions = {
@@ -103,6 +126,9 @@ const pdfOptions = {
     console.log(`🔘 Passage en FR...`);
     await switchLanguage(page, 'FR');
 
+    console.log(`☀️ Vérification du thème (Mode clair)...`);
+    await switchToLightMode(page);
+
     // On injecte VOTRE CSS seulement APRES avoir cliqué
     await page.addStyleTag({ content: perfectCSS });
 
@@ -122,6 +148,9 @@ const pdfOptions = {
 
     console.log(`🔘 Passage en EN...`);
     await switchLanguage(page, 'EN');
+
+    console.log(`☀️ Vérification du thème (Mode clair)...`);
+    await switchToLightMode(page);
 
     // On réinjecte VOTRE CSS
     await page.addStyleTag({ content: perfectCSS });

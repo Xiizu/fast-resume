@@ -14,7 +14,7 @@ export const resumeConfig: ResumeConfig = {
     name: 'Souakri Lounès',
     // Auto-detected: just drop your photo or profile image in public/images/ (any .jpg, .png, .webp)
     // You can also set a specific path here to override auto-detection:
-    photo: '/images/photo.jpg',
+    photo: '/images/logo.png',
     photoBackEmoji: '👨‍💻', // Shown when clicking the photo (3D flip)
     title: {
       en: 'Engineering Student',
@@ -337,6 +337,13 @@ export const resumeConfig: ResumeConfig = {
     },
   ],
 
+  // ===== QR CODE =====
+  qrCode: {
+    image: '/images/qr-code.svg', // Path to the QR code image (can be generated with any online QR code generator)
+    url: 'https://souakri.fr', // URL that the QR code points to
+    label: { en: 'https://souakri.fr', fr: 'https://souakri.fr' }, // Label shown below the QR code
+  },
+
   // ===== PDF (optional) =====
   // Auto-detected: just drop your PDF files in public/cv/fr/ and public/cv/en/
   // The download button will appear automatically — no config needed!
@@ -366,6 +373,7 @@ export const resumeConfig: ResumeConfig = {
       education: { en: 'EDUCATION', fr: 'FORMATION' },
       projects: { en: 'PROJECTS', fr: 'PROJETS' },
       hobbies: { en: 'HOBBIES', fr: 'LOISIRS' },
+      qrCode: { en: 'VIEW ONLINE', fr: 'VOIR EN LIGNE' },
     },
     experience: {
       mainTasks: { en: 'Main tasks:', fr: 'Tâches principales :' },

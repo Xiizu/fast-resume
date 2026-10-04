@@ -76,7 +76,7 @@ function SidebarPhoto({ photo, name, emoji }: { photo?: string; name: string; em
 
 export function Sidebar() {
   const { resolve } = useTranslation()
-  const { personal, presentation, contact, skills, hobbies, labels } = resumeConfig
+  const { personal, presentation, contact, skills, hobbies, labels, qrCode } = resumeConfig
 
   return (
     <div className="md:w-[38%] bg-gradient-to-b from-resume-sidebar-from to-resume-sidebar-to p-8">
@@ -160,6 +160,20 @@ export function Sidebar() {
           </div>
         </SidebarSection>
       )}
+
+      {/* QR Code */}
+      {/* {qrCode && (
+        <SidebarSection title={resolve(labels.sections.qrCode)}>
+          <div className="w-fit mx-auto flex rounded-lg overflow-hidden border-2 border-resume-primary/30 shadow-lg mb-2">
+            <img src={qrCode.image} alt="QR Code" className="w-32 h-32 object-cover" />
+          </div>
+          {qrCode.url && (
+            <a href={qrCode.url} target="_blank" rel="noopener noreferrer" className="block text-sm text-resume-text-secondary text-center">
+              {resolve(qrCode.label || { en: qrCode.url, fr: qrCode.url })}
+            </a>
+          )}
+        </SidebarSection>
+      )} */}
     </div>
   )
 }

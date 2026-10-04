@@ -120,6 +120,7 @@ export interface ResumeLabels {
     education: LocalizedString
     projects?: LocalizedString
     hobbies?: LocalizedString
+    qrCode: LocalizedString
   }
   experience: {
     mainTasks: LocalizedString
@@ -175,4 +176,10 @@ export interface ResumeConfig {
     defaultMode?: 'light' | 'dark' | 'system'
   }
   labels: ResumeLabels
+
+  qrCode?: {
+    image: string
+    url: string
+    label?: LocalizedString
+  }
 }
