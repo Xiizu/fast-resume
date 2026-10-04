@@ -47,6 +47,8 @@ export function MainContent() {
             <ExperienceItem
               key={exp.id}
               year={resolve(exp.period)}
+              link={exp.link}
+              location={exp.location}
               company={resolve(exp.company)}
               type={exp.type ? resolve(exp.type) : undefined}
               role={resolve(exp.role)}

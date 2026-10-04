@@ -36,6 +36,10 @@ import type { TechName } from './tech-registry'
 export interface Experience {
   id: string
   company: LocalizedString
+
+  link?: string
+  location: string
+
   role: LocalizedString
   type?: LocalizedString
   period: LocalizedString
@@ -109,6 +113,7 @@ export type PresetName = 'minimal' | 'warm' | 'ocean' | 'forest' | 'slate' | 'li
 
 export interface ResumeLabels {
   sections: {
+    presentation: LocalizedString
     contact: LocalizedString
     skills: LocalizedString
     experience: LocalizedString
@@ -133,6 +138,9 @@ export interface ResumeLabels {
 // ===== MAIN CONFIG =====
 
 export interface ResumeConfig {
+  presentation: {
+    text: LocalizedString
+  }
   personal: {
     name: string
     photo?: string

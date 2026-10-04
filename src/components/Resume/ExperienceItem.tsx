@@ -6,10 +6,15 @@ import { Modal } from '@/components/ui/Modal'
 import { cn } from '@/lib/utils'
 import { TechBadge } from './TechBadge'
 import { ExperienceDetailsContent } from './ExperienceDetails'
+import { ExternalLinkIcon } from '@/components/icons'
 
 interface ExperienceItemProps {
   year: string
   company: string
+
+  link?: string
+  location: string
+
   type?: string
   role: string
   description: string
@@ -36,6 +41,8 @@ interface ExperienceItemProps {
 export function ExperienceItem({
   year,
   company,
+  link,
+  location,
   type,
   role,
   description,
@@ -60,7 +67,7 @@ export function ExperienceItem({
 
   return (
     <motion.div
-      className="relative"
+      className="relative fold-spaces"
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       whileHover={isHighlighted ? { scale: 1.02 } : {}}
@@ -81,19 +88,28 @@ export function ExperienceItem({
         >
           <div className="w-20 flex-shrink-0">
             <span className="text-sm font-bold text-resume-primary">{year}</span>
+            <br />
+            <span className="text-xs text-resume-text-secondary">{location}</span>
           </div>
 
           <div className="flex-1 min-w-0 relative">
             {details && (
               <motion.div
                 animate={{ rotate: expanded ? 180 : 0 }}
-                className="absolute top-0 right-0"
+                className="absolute top-0 right-0 no-print"
               >
                 <ChevronDownIcon className="w-4 h-4 text-resume-primary" />
               </motion.div>
             )}
             <div className="flex items-center gap-2 flex-wrap pr-6 md:pr-0">
-              <h3 className="text-sm font-semibold text-resume-text">{company}</h3>
+              <h3 className="text-sm font-semibold text-resume-text flex items-center gap-1">
+                {company}
+                {link && (
+                  <a href={link} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${company}`} className="no-print">
+                    <ExternalLinkIcon className="w-3.5 h-3.5 text-resume-primary" />
+                  </a>
+                )}
+              </h3>
               {type && (
                 <span className="text-xs px-2 py-0.5 bg-resume-primary/10 text-resume-primary rounded">
                   {type}
@@ -101,9 +117,9 @@ export function ExperienceItem({
               )}
             </div>
             <p className="text-xs text-resume-text-secondary mt-0.5">{role}</p>
-            <p className="text-xs text-resume-text-secondary/80 mt-1 line-clamp-2">{description}</p>
+            <p className="text-xs text-resume-text-secondary/80 mt-1 whitespace-pre-line">{description}</p>
 
-            <div className="flex flex-wrap gap-1.5 mt-2">
+            <div className="flex flex-wrap gap-1.5 mt-2 no-print">
               {techs.map((tech) => (
                 <TechBadge key={tech} tech={tech} />
               ))}
@@ -149,9 +165,10 @@ export function ExperienceItem({
           onClose={() => setIsModalOpen(false)}
           header={
             <div>
-              <h2 className="font-semibold text-lg text-resume-text">{company}</h2>
+              <h2 className="font-semibold text-lg text-resume-text"><a href={link} target="_blank" rel="noopener noreferrer">{company}</a></h2>
               <p className="text-sm text-resume-primary">{role}</p>
               <p className="text-xs text-resume-text-secondary mt-1">{year}</p>
+              <p className="text-xs text-resume-text-secondary mt-1">{location}</p>
             </div>
           }
         >

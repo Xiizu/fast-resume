@@ -10,28 +10,36 @@ import type { ResumeConfig } from './types'
  * Add as many languages as you need — just make sure to list them in `languages.available`.
  */
 export const resumeConfig: ResumeConfig = {
+  // ===== PRESENTATION =====
+  presentation: {
+    text: {
+      en: "Second-year engineering student at Polytech Nantes, seeking a 4-month internship for this summer.",
+      fr: "Etudiant en deuxième année de cycle ingénieur à Polytech Nantes, je cherche un stage de 4 mois pour cet été.",
+    },
+  },
+
   // ===== PERSONAL INFO =====
   personal: {
-    name: 'Jane Doe',
+    name: 'Souakri Lounès',
     // Auto-detected: just drop your photo or profile image in public/images/ (any .jpg, .png, .webp)
     // You can also set a specific path here to override auto-detection:
     photo: '/images/photo.jpg',
     photoBackEmoji: '👩‍💻', // Shown when clicking the photo (3D flip)
     title: {
-      en: 'Fullstack Developer',
-      fr: 'Développeuse Fullstack',
+      en: 'Engineering Student',
+      fr: 'Etudiant Ingénieur',
     },
     subtitle: {
-      en: '6 years of experience',
-      fr: '6 ans d\'expérience',
+      en: 'Computer Science',
+      fr: 'Informatique',
     },
-    location: 'Paris, France',
+    location: 'Nantes, France',
   },
 
   // ===== SEO (used in <head> meta tags) =====
   seo: {
-    title: 'Jane Doe — Fullstack Developer',
-    description: 'Interactive resume of Jane Doe, Fullstack Developer specializing in React and TypeScript.',
+    title: 'Souakri Lounès — Engineering Student',
+    description: 'Interactive resume of Souakri Lounès, Engineering Student specializing in Computer Science.',
   },
 
   // ===== LANGUAGES =====
@@ -46,11 +54,11 @@ export const resumeConfig: ResumeConfig = {
 
   // ===== CONTACT =====
   contact: [
-    { type: 'github', label: 'janedoe', href: 'https://github.com/janedoe' },
-    { type: 'linkedin', label: 'Jane Doe', href: 'https://linkedin.com/in/janedoe' },
-    { type: 'email', label: 'jane@example.com' },
-    { type: 'phone', label: '+33 6 12 34 56 78' },
-    { type: 'location', label: 'Paris, France' },
+    { type: 'github', label: 'Xiizu', href: 'https://github.com/Xiizu' },
+    { type: 'linkedin', label: 'Souakri Lounès', href: 'https://linkedin.com/in/souakri' },
+    { type: 'email', label: 'lounes.skr@gmail.com' },
+    { type: 'phone', label: '+33 7 83 17 86 02' },
+    { type: 'location', label: 'Nantes, France' },
   ],
 
   // ===== SKILLS =====
@@ -60,24 +68,31 @@ export const resumeConfig: ResumeConfig = {
       type: 'languages',
       items: [
         { name: { en: 'French', fr: 'Français' }, level: { en: 'Native', fr: 'Natif' } },
-        { name: { en: 'English', fr: 'Anglais' }, level: { en: 'Professional', fr: 'Professionnel' }, details: 'TOEIC 910' },
+        { name: { en: 'English', fr: 'Anglais' }, level: { en: 'Professional', fr: 'Professionnel' }, details: 'TOEIC 925' },
       ],
     },
     {
-      title: { en: 'Frontend', fr: 'Frontend' },
+      title: { en: 'Web Development', fr: 'Développement Web' },
       type: 'badges',
       items: [
         { name: 'React' },
-        { name: 'TypeScript' },
-        { name: 'Angular' },
+        { name: 'JavaScript' },
+        { name: 'PHP' },
+        { name: 'HTML' },
+        { name: 'CSS' },
+        { name: 'Node.js' },
       ],
     },
     {
-      title: { en: 'Backend', fr: 'Backend' },
+      title: { en: 'Languages', fr: 'Langues' },
       type: 'badges',
       items: [
-        { name: 'Node.js' },
+        { name: 'Ada' },
         { name: 'Python' },
+        { name: 'Java' },
+        { name: 'C/C++' },
+        { name: 'kotlin' },
+        { name: 'R' },
       ],
     },
     {
@@ -85,7 +100,9 @@ export const resumeConfig: ResumeConfig = {
       type: 'badges',
       items: [
         { name: 'PostgreSQL' },
-        { name: 'MongoDB' },
+        { name: 'MariaDB' },
+        { name: 'SQLite' },
+        { name: 'Oracle' },
       ],
     },
     {
@@ -93,18 +110,17 @@ export const resumeConfig: ResumeConfig = {
       type: 'badges',
       items: [
         { name: 'Docker' },
-        { name: 'Kubernetes' },
-        { name: 'AWS' },
-        { name: 'GitHub Actions' },
+        { name: 'Git' },
+        { name: 'Linux' },
       ],
     },
-    {
+/*     {
       title: { en: 'Methodologies', fr: 'Méthodologies' },
       type: 'text',
       items: [
         { name: { en: 'Agile/Scrum, TDD, Code Review, CI/CD', fr: 'Agile/Scrum, TDD, Code Review, CI/CD' } },
       ],
-    },
+    }, */
   ],
 
   // ===== PROFESSIONAL EXPERIENCES =====
@@ -301,26 +317,25 @@ export const resumeConfig: ResumeConfig = {
   // ===== HOBBIES (optional) =====
   hobbies: [
     {
-      title: { en: 'Photography', fr: 'Photographie' },
+      title: { en: 'Biking', fr: 'Vélo' },
       details: [
-        { en: 'Street photography', fr: 'Photo de rue' },
-        { en: '5 years', fr: '5 ans' },
+        { en: 'Mountain biking', fr: 'Vélo tout terrain' },
       ],
     },
     {
-      title: { en: 'Hiking', fr: 'Randonnée' },
+      title: { en: 'Board Games', fr: 'Jeux de société' },
       details: [
-        { en: 'Mountain trails', fr: 'Sentiers de montagne' },
+        { en: 'Strategy games / Board games', fr: 'Jeux de stratégie / Jeux de plateau' },
       ],
     },
     {
-      title: { en: 'Open Source', fr: 'Open Source' },
+      title: { en: 'Video Games', fr: 'Jeux vidéo' },
+      details: [
+        { en: 'Minecraft', fr: 'Minecraft' },
+      ],
     },
     {
-      title: { en: 'Guitar', fr: 'Guitare' },
-      details: [
-        { en: '3 years', fr: '3 ans' },
-      ],
+      title: { en: 'Creativity', fr: 'Créativité' },
     },
   ],
 
@@ -335,7 +350,7 @@ export const resumeConfig: ResumeConfig = {
 
   // ===== THEME =====
   theme: {
-    preset: 'warm', // 'minimal' | 'warm' | 'ocean' | 'forest' | 'slate' | 'lilac'
+    preset: 'slate', // 'minimal' | 'warm' | 'ocean' | 'forest' | 'slate' | 'lilac'
     // You can override individual colors:
     // colors: {
     //   primary: '#8B5A2B',
@@ -346,6 +361,7 @@ export const resumeConfig: ResumeConfig = {
   // ===== UI LABELS =====
   labels: {
     sections: {
+      presentation: { en: 'PRESENTATION', fr: 'PRÉSENTATION' },
       contact: { en: 'CONTACT', fr: 'CONTACT' },
       skills: { en: 'SKILLS', fr: 'COMPÉTENCES' },
       experience: { en: 'PROFESSIONAL EXPERIENCE', fr: 'EXPÉRIENCES PROFESSIONNELLES' },
