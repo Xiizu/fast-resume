@@ -76,7 +76,7 @@ function SidebarPhoto({ photo, name, emoji }: { photo?: string; name: string; em
 
 export function Sidebar() {
   const { resolve } = useTranslation()
-  const { personal, presentation, contact, skills, hobbies, labels, qrCode } = resumeConfig
+  const { personal, presentation, contact, skills, hobbies, labels/* , qrCode */ } = resumeConfig
 
   return (
     <div className="md:w-[38%] bg-gradient-to-b from-resume-sidebar-from to-resume-sidebar-to p-8">
