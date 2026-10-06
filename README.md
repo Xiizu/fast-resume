@@ -1,5 +1,7 @@
 # Fast CV
 
+CV disponible sur l'adresse suivante : https://souakri.fr 
+
 Adapté à partir du code source de [interactive-resume-template](https://github.com/clementbouly/interactive-resume-template)
 
 Ajout de nouvelles fonctionnalités :
