@@ -107,7 +107,8 @@ const pdfOptions = {
   printBackground: true,
   scale: 1,
   pageRanges: '1',
-  margin: { top: '0px', right: '0px', bottom: '0px', left: '0px' }
+  margin: { top: '0px', right: '0px', bottom: '0px', left: '0px' },
+  tagged: true
 };
 
 (async () => {

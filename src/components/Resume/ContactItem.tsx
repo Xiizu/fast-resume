@@ -21,6 +21,15 @@ const ICON_COMPONENTS: Record<ContactType, React.FC<React.SVGProps<SVGSVGElement
   website: WebsiteIcon,
 }
 
+const ICON_LABELS: Record<ContactType, string> = {
+  github: "Lien vers mon profil GitHub",
+  linkedin: "Lien vers mon profil LinkedIn",
+  email: "Copier mon adresse e-mail",
+  phone: "Copier mon numéro de téléphone",
+  location: "Mon adresse",
+  website: "Lien vers mon site web",
+}
+
 interface ContactItemProps {
   type: ContactType
   label: string
@@ -45,7 +54,7 @@ export function ContactItem({ type, label, href }: ContactItemProps) {
     <span className="relative inline-flex items-center gap-1 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:bg-resume-primary after:origin-left after:scale-x-0 group-hover:after:scale-x-100 after:transition-transform after:duration-300">
       {label}
       {isExternal && (
-        <ExternalLinkIcon className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 shrink-0" />
+        <ExternalLinkIcon className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 shrink-0" role="img" aria-label="Lien externe" />
       )}
     </span>
   )
@@ -80,7 +89,7 @@ export function ContactItem({ type, label, href }: ContactItemProps) {
                 transition={{ duration: 0.10, ease: 'easeOut' }}
                 className="absolute inset-0"
               >
-                <IconComponent className="w-4 h-4" />
+                <IconComponent className="w-4 h-4" role="img" aria-label={ICON_LABELS[type]} />
               </motion.span>
             )}
           </AnimatePresence>
@@ -115,7 +124,7 @@ export function ContactItem({ type, label, href }: ContactItemProps) {
         className="group flex items-center gap-3 text-sm text-resume-text-secondary hover:text-resume-primary transition-colors duration-200"
       >
         <span className="text-resume-primary group-hover:scale-115 transition-transform duration-200">
-          <IconComponent className="w-4 h-4" />
+          <IconComponent className="w-4 h-4" role="img" aria-label={ICON_LABELS[type]} />
         </span>
         {labelContent}
       </a>
@@ -126,7 +135,7 @@ export function ContactItem({ type, label, href }: ContactItemProps) {
   return (
     <div className="group flex items-center gap-3 text-sm text-resume-text-secondary">
       <span className="text-resume-primary">
-        <IconComponent className="w-4 h-4" />
+        <IconComponent className="w-4 h-4" role="img" aria-label={ICON_LABELS[type]} />
       </span>
       <span>{label}</span>
     </div>

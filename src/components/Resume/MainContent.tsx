@@ -23,9 +23,10 @@ export function MainContent() {
   }
 
   return (
-    <div className="md:w-[62%] p-8">
+    <div className="w-full">
+    {/* <div className="md:w-[62%] p-8"> */}
       {/* Header */}
-      <div className="text-center mb-8">
+      {/* <div className="text-center mb-8">
         <h1 className="text-3xl md:text-4xl font-bold tracking-[0.15em] text-resume-text">
           {personal.name.toUpperCase()}
         </h1>
@@ -35,7 +36,7 @@ export function MainContent() {
         {personal.subtitle && (
           <p className="text-sm text-resume-primary mt-1">{resolve(personal.subtitle)}</p>
         )}
-      </div>
+      </div> */}
 
       {/* Experiences */}
       <div className="relative">

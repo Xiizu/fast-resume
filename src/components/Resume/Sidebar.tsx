@@ -79,7 +79,8 @@ export function Sidebar() {
   const { personal, presentation, contact, skills, hobbies, labels/* , qrCode */ } = resumeConfig
 
   return (
-    <div className="md:w-[38%] bg-gradient-to-b from-resume-sidebar-from to-resume-sidebar-to p-8">
+    <div className="bg-gradient-to-b from-resume-sidebar-from to-resume-sidebar-to">
+    {/* <div className="md:w-[38%] bg-gradient-to-b from-resume-sidebar-from to-resume-sidebar-to p-8"> */}
       {/* Photo / Profile image — priority: config > auto-detected > emoji fallback */}
       <SidebarPhoto
         photo={(personal.photo || detectedAssets.photo) ? assetUrl(personal.photo || detectedAssets.photo!) : undefined}

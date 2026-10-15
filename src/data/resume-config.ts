@@ -4,8 +4,8 @@ export const resumeConfig: ResumeConfig = {
   // ===== PRESENTATION =====
   presentation: {
     text: {
-      en: "Second-year engineering student at Polytech Nantes, seeking a 4-month internship for this summer.",
-      fr: "Etudiant en deuxième année de cycle ingénieur à Polytech Nantes, je cherche un stage de 4 mois pour cet été.",
+      en: "Second-year engineering student at Polytech Nantes, seeking a 4-month internship for summer 2027.",
+      fr: "Etudiant en deuxième année de cycle ingénieur à Polytech Nantes, je cherche un stage de 4 mois pour l'été 2027.",
     },
   },
 
@@ -105,6 +105,16 @@ export const resumeConfig: ResumeConfig = {
         { name: 'Linux' },
       ],
     },
+    {
+      title: { en: 'Soft Skills', fr: 'Soft Skills' },
+      type: 'badges',
+      items: [
+        { name: { en: 'Agile', fr: 'Agile' } },
+        { name: { en: 'Teamwork', fr: 'Travail en équipe' } },
+        { name: { en: 'Autonomy', fr: 'Autonomie' } },
+        { name: { en: 'Communication', fr: 'Communication' } },
+      ],
+    },
 /*     {
       title: { en: 'Methodologies', fr: 'Méthodologies' },
       type: 'text',
@@ -121,7 +131,7 @@ export const resumeConfig: ResumeConfig = {
       company: { en: 'Sowebio', fr: 'Sowebio' },
       link: 'https://www.soweb.io/',
       location: 'Saint Pierre d\'Oléron, France',
-      role: { en: 'Développeur Ada', fr: 'Développeur Ada' },
+      role: { en: 'Ada Developer', fr: 'Développeur Ada' },
       type: { en: 'Internship', fr: 'Stage' },
       period: { en: '2026 summer', fr: 'été 2026' },
       description: {
@@ -168,9 +178,9 @@ export const resumeConfig: ResumeConfig = {
       link: 'https://www.soweb.io/',
       location: 'Saint Pierre d\'Oléron, France',
       company: { en: 'Sowebio', fr: 'Sowebio' },
-      role: { en: 'Développeur Ada', fr: 'Développeur Ada' },
+      role: { en: 'Ada Developer', fr: 'Développeur Ada' },
       type: { en: 'Internship', fr: 'Stage' },
-      period: { en: 'January - February 2025', fr: 'Janvier - Février 2025' },
+      period: { en: 'Jan-Feb 2025', fr: 'Jan-Fév 2025' },
       description: {
         en: 'Created a PDF generation tool summarizing website performance via the Matomo API.',
         fr: 'Création d’un outil de génération de PDF récapitulant les performances d\'un site web via, l’API Matomo.',
@@ -223,10 +233,10 @@ export const resumeConfig: ResumeConfig = {
       location: 'Marennes, France',
       role: { en: 'Fullstack Developer', fr: 'Développeur Fullstack' },
       type: { en: 'Internship', fr: 'Stage' },
-      period: { en: 'May - June 2024', fr: 'Mai - Juin 2024' },
+      period: { en: 'May-June 2024', fr: 'Mai-Juin 2024' },
       description: {
-        en: 'Developed the frontend of a web application in React.\nBuilt the backend in PHP Symphony.\nCreated an Android application in Kotlin.',
-        fr: 'Création du front end d’un site web en React.\nCréation d’un back end en PHP Symphony.\nCréation d’une application Android en Kotlin.',
+        en: 'Developed the frontend of a web application in React.\nBuilt the backend in PHP Symfony.\nCreated an Android application in Kotlin.',
+        fr: 'Création du front end d’un site web en React.\nCréation d’un back end en PHP Symfony.\nCréation d’une application Android en Kotlin.',
       },
       techs: ['React', 'GitLab', 'PHP', 'Kotlin', 'Symfony', 'MariaDB'],
       /* details: {
@@ -328,9 +338,6 @@ export const resumeConfig: ResumeConfig = {
     },
     {
       title: { en: 'Video Games', fr: 'Jeux vidéo' },
-      details: [
-        { en: 'Minecraft', fr: 'Minecraft' },
-      ],
     },
     {
       title: { en: 'Creativity', fr: 'Créativité' },
