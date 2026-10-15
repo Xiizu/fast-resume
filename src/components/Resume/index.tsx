@@ -24,7 +24,7 @@ export function Resume() {
       {/* Resume card */}
 
 
-        <div className="bg-resume-bg-card rounded-lg shadow-2xl overflow-hidden print-crop flex flex-col md:flex-row">
+        <motion.div className="bg-resume-bg-card rounded-lg shadow-2xl overflow-hidden print-crop flex flex-col md:flex-row">
 
           {/* 1. LA SIDEBAR (À gauche visuellement) */}
           <div className="md:w-[38%] bg-gradient-to-b from-resume-sidebar-from to-resume-sidebar-to p-8 order-2 md:order-1">
@@ -51,7 +51,7 @@ export function Resume() {
             <MainContent />
           </div>
 
-        </div>
+        </motion.div>
 
       {/* <motion.div
         initial={{ opacity: 0, y: 20 }}
