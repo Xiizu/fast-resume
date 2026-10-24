@@ -4,8 +4,8 @@ export const resumeConfig: ResumeConfig = {
   // ===== PRESENTATION =====
   presentation: {
     text: {
-      en: "Second-year engineering student at Polytech Nantes, seeking a 4-month internship for summer 2027.",
-      fr: "Etudiant en deuxième année de cycle ingénieur à Polytech Nantes, je cherche un stage de 4 mois pour l'été 2027.",
+      en: "Second-year engineering student at Polytech Nantes, seeking a 4-month internship starting in May 2027.",
+      fr: "Etudiant en deuxième année de cycle ingénieur à Polytech Nantes, je cherche un stage de 4 mois débutant en Mai 2027.",
     },
   },
 
@@ -113,6 +113,7 @@ export const resumeConfig: ResumeConfig = {
         { name: { en: 'Teamwork', fr: 'Travail en équipe' } },
         { name: { en: 'Autonomy', fr: 'Autonomie' } },
         { name: { en: 'Communication', fr: 'Communication' } },
+        { name: { en: 'Creativity', fr: 'Créativité' } },
       ],
     },
 /*     {
@@ -331,16 +332,10 @@ export const resumeConfig: ResumeConfig = {
       ],
     },
     {
-      title: { en: 'Board Games', fr: 'Jeux de société' },
+      title: { en: 'Games', fr: 'Jeux' },
       details: [
-        { en: 'Strategy games / Board games', fr: 'Jeux de stratégie / Jeux de plateau' },
+        { en: 'Strategy games / Board games / Video games', fr: 'Jeux de stratégie / Jeux de plateau / Jeux vidéo' },
       ],
-    },
-    {
-      title: { en: 'Video Games', fr: 'Jeux vidéo' },
-    },
-    {
-      title: { en: 'Creativity', fr: 'Créativité' },
     },
   ],
 
