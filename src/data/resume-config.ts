@@ -181,7 +181,7 @@ export const resumeConfig: ResumeConfig = {
       company: { en: 'Sowebio', fr: 'Sowebio' },
       role: { en: 'Ada Developer', fr: 'Développeur Ada' },
       type: { en: 'Internship', fr: 'Stage' },
-      period: { en: 'Jan-Feb 2025', fr: 'Jan-Fév 2025' },
+      period: { en: '01/25-02/25', fr: '01/25-02/25' },
       description: {
         en: 'Created a PDF generation tool summarizing website performance via the Matomo API.',
         fr: 'Création d’un outil de génération de PDF récapitulant les performances d\'un site web via, l’API Matomo.',
@@ -234,7 +234,7 @@ export const resumeConfig: ResumeConfig = {
       location: 'Marennes, France',
       role: { en: 'Fullstack Developer', fr: 'Développeur Fullstack' },
       type: { en: 'Internship', fr: 'Stage' },
-      period: { en: 'May-June 2024', fr: 'Mai-Juin 2024' },
+      period: { en: '05/24-06/24', fr: '05/24-06/24' },
       description: {
         en: 'Developed the frontend of a web application in React.\nBuilt the backend in PHP Symfony.\nCreated an Android application in Kotlin.',
         fr: 'Création du front end d’un site web en React.\nCréation d’un back end en PHP Symfony.\nCréation d’une application Android en Kotlin.',
