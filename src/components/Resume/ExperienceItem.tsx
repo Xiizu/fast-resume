@@ -86,7 +86,7 @@ export function ExperienceItem({
               : 'hover:bg-resume-primary/5'
           )}
         >
-          <div className="w-20 flex-shrink-0">
+          <div className="w-25 flex-shrink-0">
             <span className="text-sm font-bold text-resume-primary">{year}</span>
             <br />
             <span className="text-xs text-resume-text-secondary">{location}</span>
